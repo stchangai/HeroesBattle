@@ -81,6 +81,11 @@ header h1{
     border:black solid 2px;
     grid-column: 1;   
 }
+
+.chevron{
+    display:none;
+}
+
 #bouton{
     display:flex;
     flex-direction: column;
@@ -238,11 +243,12 @@ header h1{
 
 .winnerImg{
     position:absolute;
-    top: -1vh;
+    top: 10vh;
     transform: scale(0);
     transition:transform 3s;
     transform-origin: center;
     z-index:101;
+    height:70vh;
 }
 
 
@@ -279,11 +285,18 @@ header h1{
     }
     #menu_title{
         grid-area: title;
+        display: flex;
+        align-items:center;
     }
 
-    .menu h2, .menu h3, .menu label, .menu h4, .menu .team button{
+    .menu h2, .menu h3, .menu label, .menu h4{
         color:white;
     }
+
+    .menu .team button{
+        color:black;
+    }
+
     .down{
         top:55vh;
         height: 35vh;
@@ -401,9 +414,15 @@ header h1{
         padding: 0px 8px;
         width: auto;
         top: 57%;
-        height: 18vh;
-        overflow: scroll;
+        max-height: 18vh;
+        overflow-y: scroll;
     }
+
+    .chevron{
+    display:block;
+    height:2vh;
+    margin-left:2vw;
+}
 
 }
 

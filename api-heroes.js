@@ -241,7 +241,7 @@
 				battlefield.append(WinnerImage);
 				// lancement de la function avec un délai de 200ms
 			  	setTimeout(function(){
-					WinnerImage.style.transform = 'scale(0.8)';
+					WinnerImage.style.transform = 'scale(0.5)';
 					start.disabled=true;
 				}, 200);
 			});
@@ -262,7 +262,7 @@
 				battlefield.append(WinnerImage);
 				// lancement de la function avec un délai de 200ms
 			  	setTimeout(function(){
-					WinnerImage.style.transform = 'scale(0.8)';
+					WinnerImage.style.transform = 'scale(0.5)';
 					start.disabled=true;
 					start.style.animation = 'none';
 					document.querySelector('.btnReset').style.animation = '1s linear 2s infinite bouing';
@@ -399,7 +399,7 @@ function autocomplete(inp, arr, submit, length) {
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the superheroes array as possible autocomplete values:*/
 autocomplete(document.getElementById("input1"), superheroes, "submit1", 3);
-autocomplete(document.getElementById("input2"), superheroes, "submit2", 1);
+autocomplete(document.getElementById("input2"), superheroes, "submit2", 3);
 
 document.getElementById("input2").addEventListener('click', function(){
 	console.log("hello");
