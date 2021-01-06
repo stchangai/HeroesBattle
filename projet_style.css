@@ -103,7 +103,7 @@ header h1{
     display: flex;
     align-items: center;
 }
-.heroes_name button{/*croix à coté des héros---------*/
+.team .heroes_name button{/*croix à coté des héros---------*/
     background-color: transparent;
     border:transparent;
     color:black;
@@ -234,6 +234,8 @@ header h1{
 
 .images{
     display:flex;
+    flex:1;
+    align-self: center;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
@@ -345,17 +347,22 @@ header h1{
         order: 5;
     }
     #combat_team1, #combat_team2{
-        height:55vh;
+       /*height:55vh;*/
     }
 
     #combat_team2{
         margin-left: auto;
     }
-    
+
     .heroesImg
     {  
         flex-shrink: 3;
     }
+
+    .images{
+        margin-bottom: 15vh;
+    }
+
     .team h3, .heroes_name div,form, #bouton,#menu_title h2{
     border-top: 0px;
     }
@@ -422,11 +429,15 @@ header h1{
     display:block;
     height:2vh;
     margin-left:2vw;
-}
+    }
+
+    .team .heroes_name button{
+        color:white;
+    }
 
 }
 
-@media (max-width: 555px){
+@media (max-width: 586px){
     .barTeam{
         font-size: 10px;
     }
@@ -441,14 +452,16 @@ header h1{
         font-size: 10px;
     }
 
-    .menu input{
-        width:120%;
-    }
-
 
     .autocomplete-items{
         width: 100%;
         font-size: 14px;
+    }
+
+    .images{
+        flex:0;
+        align-self: auto;
+        margin-bottom: 0;
     }
 
 }
