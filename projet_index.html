@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title> Heroes Battle </title>
+        <link rel="stylesheet" href="projet_style.css">
+        <link href="normalize.css" rel="stylesheet">
+        <style>
+            @font-face {
+                font-family: 'Kablam';
+                src: url("./font/KaBlam.ttf") format("truetype");
+               }
+            </style>
+    </head>
+
+<body>
+    <header class="gradient">
+        <h1>HEROES BATTLE</h1>
+        <div class="btnReset">
+            <img class="reset" src="./image/reset.png" alt="icône simple d'actualisation du jeu">
+        </div>
+        
+    </header>
+
+    <section class="corps"> <!-- pour pouvoir faire un grid de 2 colonnes sans le bandeau de titre ( surement une meilleur solution possible-->
+        <img class="arrow_indication" src="./image/arrow.png"></img>
+        <section class ="menu resize">
+            <div id=menu_title onclick="UnfoldMenu()">
+                <h2>CHOISIS TES HÉROS</h2>
+            </div>
+            <div class="team team1 close">
+                <h3>TEAM 1</h3>
+                <div class="heroes_name">
+                </div>
+                <form>
+                    <label>Ajouter</label>
+                    <input id="input1" type="text" class="ajouter" name="name" required
+                                        minlength="4" maxlength="20" size="10" autocomplete="off">
+                    <button id="submit1" class="formButton" onclick="GetInput(this);return false">OK</button>
+                </form>
+
+            </div>
+
+            <div class="team team2 close">
+                <h3 class="blue">TEAM 2</h3>
+                <div class="heroes_name">
+                </div>
+                <form>
+                    <label>Ajouter</label>
+                    <input id="input2" type="text" class="ajouter" name="name" required
+                                       minlength="4" maxlength="20" size="10" autocomplete="off">
+                    <button id="submit2" class="formButton" onclick="GetInput(this);return false">OK</button>
+                </form>
+            </div>
+            <div class="boutonStart close">
+                <button> LANCER LE MATCH !</button>
+            </div>
+        
+        </section>
+
+        <section class="combat">
+        <div id="combat_team1">
+            <div class="bar">
+                <div class="barlifeContainer">
+                    <div class="lifebar child gauche"></div>
+                    <img class="lifebar parent" src="./image/life-bar.png">
+                    <h3 class="barTeam">TEAM 1</h3>
+                </div>
+            </div>
+            <div class="images"></div>
+        </div>
+        </div>
+        <div id="combat_team2">
+            <div class="bar">
+                <div class="barlifeContainer">
+                    <div class="lifebar child droit"></div>
+                    <img class="lifebar parent" src="./image/life-bar.png">
+                    <h3 class="barTeam blue">TEAM 2</h3>
+                </div>
+            </div>
+            <div class="images"></div>
+        </div>
+        </section>
+    </section>
+    <script type="text/javascript" src="./api-heroes.js"></script>
+</body>
